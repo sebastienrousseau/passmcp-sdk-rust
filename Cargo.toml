@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2026 Sebastien Rousseau <sebastian.rousseau@gmail.com>
+# SPDX-License-Identifier: Apache-2.0
+
+[package]
+name = "passmcp-sdk"
+version = "0.0.10"
+edition = "2021"
+rust-version = "1.85"
+license = "Apache-2.0"
+description = "Apache-2.0 Rust MCP client and server SDK with capability-gated 2026-07-28 conformance and offline passmcp attestation verification."
+repository = "https://github.com/sebastienrousseau/passmcp-sdk-rust"
+homepage = "https://satellion.com/passmcp/"
+readme = "README.md"
+keywords = ["mcp", "attestation", "in-toto", "jsonrpc", "passmcp"]
+categories = ["network-programming", "authentication", "api-bindings"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
