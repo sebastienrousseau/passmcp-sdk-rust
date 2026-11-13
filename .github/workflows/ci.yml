@@ -32,7 +32,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Install Rust (${{ matrix.toolchain }})
-        uses: dtolnay/rust-toolchain@e97e2d8cc328f1b50210efc529dca002feb193a2 # master
+        uses: dtolnay/rust-toolchain@683b588c487a69d01f6c6ddf40f036ff682cc2c8 # master
         with:
           toolchain: ${{ matrix.toolchain }}
       - name: Test and example
@@ -52,7 +52,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Install Rust (stable, rustfmt, clippy)
-        uses: dtolnay/rust-toolchain@e97e2d8cc328f1b50210efc529dca002feb193a2 # master
+        uses: dtolnay/rust-toolchain@683b588c487a69d01f6c6ddf40f036ff682cc2c8 # master
         with:
           toolchain: stable
           components: rustfmt, clippy
@@ -61,7 +61,7 @@ jobs:
           cargo fmt --check
           cargo clippy --all-targets -- -D warnings
       - name: REUSE compliance
-        uses: fsfe/reuse-action@266f8748c6f7ab9d6fb2fdd2ac1fd5bbea0fb43e # v6.1.2
+        uses: fsfe/reuse-action@676e2d560c9a403aa252096d99fcab3e1132b0f5 # v6.0.0
       - name: Family manifest & version lockstep
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
